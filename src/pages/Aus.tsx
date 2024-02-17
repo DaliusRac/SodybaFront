@@ -4,7 +4,7 @@ import styles from "./Aus.module.css";
 const Aus: FunctionComponent = () => {
   return (
     <div className={styles.aus}>
-      <div className={styles.findHereGroup}>
+      <div className={styles.navbar}>
         <button className={styles.homebutton}>
           <img
             className={styles.home4HomeHouseRoofShelteIcon}
@@ -13,7 +13,7 @@ const Aus: FunctionComponent = () => {
           />
           <i className={styles.footerInfo}>Austėjos sodyba</i>
         </button>
-        <img className={styles.languageicon} alt="" src="/languageicon.svg" />
+        <input className={styles.languagebutton} type="checkbox" />
         <div className={styles.findherebutton}>
           <b className={styles.inputLabels}>Sodyboje rasite</b>
         </div>
@@ -31,19 +31,23 @@ const Aus: FunctionComponent = () => {
         </div>
       </div>
       <section className={styles.footerFrame}>
-        <div className={styles.footerhelpinfonametext}>
-          <p className={styles.blankLine}>&nbsp;</p>
-          <p className={styles.kontaktai}>Kontaktai</p>
-          <p className={styles.p}>
-            <a className={styles.a} href="tel:+37065391732" target="_blank">
-              <span className={styles.span}>+370 6</span>
-            </a>
-            *******
-          </p>
-          <p className={styles.adresas}>Adresas:</p>
-          <p className={styles.lingailiG33}>Lingailių g. 33, Rėkyva</p>
+        <div className={styles.footerHelpInfoFrame}>
+          <div className={styles.footerHelpInfoContainer}>
+            <p className={styles.blankLine}>&nbsp;</p>
+            <p className={styles.kontaktai}>Kontaktai</p>
+            <p className={styles.p}>
+              <a className={styles.a} href="tel:+37065391732" target="_blank">
+                <span className={styles.span}>+370 6</span>
+              </a>
+              *******
+            </p>
+            <p className={styles.adresas}>Adresas:</p>
+            <p className={styles.lingailiG33}>Lingailių g. 33, Rėkyva</p>
+          </div>
         </div>
-        <div className={styles.googlemapsembedholderframe} />
+        <div className={styles.googleMapsEmbedHolderFrame}>
+          <div className={styles.map}>map</div>
+        </div>
       </section>
     </div>
   );

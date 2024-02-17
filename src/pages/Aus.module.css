@@ -31,15 +31,15 @@
   overflow: hidden;
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: center;
   gap: 16px;
   white-space: nowrap;
 }
-.languageicon {
+.languagebutton {
+  margin: 0;
   height: 32px;
   width: 32px;
-  position: relative;
 }
 .inputLabels {
   flex: 1;
@@ -135,7 +135,7 @@
   display: inline-block;
 }
 .contactusbutton,
-.findHereGroup {
+.navbar {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -154,11 +154,9 @@
   flex-shrink: 0;
   justify-content: center;
 }
-.findHereGroup {
+.navbar {
   flex-wrap: wrap;
   justify-content: flex-start;
-  padding: 0 20px;
-  box-sizing: border-box;
   gap: 5px;
   max-width: 100%;
 }
@@ -177,25 +175,36 @@
 .p {
   margin: 0;
 }
-.footerhelpinfonametext {
+.footerHelpInfoContainer {
   height: 150px;
   position: relative;
   line-height: 30px;
   display: inline-block;
 }
-.googlemapsembedholderframe {
-  height: 140px;
-  width: 100px;
+.footerHelpInfoFrame {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-3xs) 14px;
+  box-sizing: border-box;
+  min-width: 173px;
+}
+.map {
   position: relative;
+  line-height: 30px;
+}
+.googleMapsEmbedHolderFrame {
   overflow: hidden;
-  flex-shrink: 0;
-  display: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 26px 29px;
 }
 .aus,
 .footerFrame {
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
   color: var(--color-black);
 }
 .footerFrame {
@@ -211,10 +220,11 @@
   );
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   flex-direction: row;
-  padding: var(--padding-3xs) 15px;
+  align-items: flex-start;
+  justify-content: center;
   gap: 10px;
   text-align: left;
-  font-size: 14px;
+  font-size: var(--font-size-sm);
   font-family: var(--font-arimo);
 }
 .aus {
@@ -236,7 +246,9 @@
     );
   overflow: hidden;
   flex-direction: column;
-  padding: var(--padding-3xs) var(--padding-3xs) 905px;
+  align-items: center;
+  justify-content: flex-start;
+  padding: var(--padding-3xs) 64px;
   box-sizing: border-box;
   gap: var(--gap-45xl);
   letter-spacing: normal;
@@ -244,17 +256,21 @@
   font-size: var(--font-size-mini);
   font-family: var(--font-mina);
 }
-@media screen and (max-width: 1500px) {
-  .footerFrame {
-    width: calc(100% - 40px);
-  }
-}
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 800px) {
   .aus {
     gap: var(--gap-45xl);
+    padding-left: var(--padding-13xl);
+    padding-right: var(--padding-13xl);
+    box-sizing: border-box;
   }
 }
 @media screen and (max-width: 450px) {
+  .footerHelpInfoFrame {
+    flex: 1;
+  }
+  .footerFrame {
+    flex-wrap: wrap;
+  }
   .aus {
     gap: var(--gap-45xl);
   }
