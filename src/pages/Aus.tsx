@@ -46,7 +46,17 @@ const Aus: FunctionComponent = () => {
           </div>
         </div>
         <div className={styles.googleMapsEmbedHolderFrame}>
-          <div className={styles.map}>map</div>
+          <div className={styles.map}>
+          <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2239.9107875135855!2d23.31658621353212!3d55.846862773007096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e5e1e028aa137b%3A0xf62dc2d6953dad87!2sLingaili%C5%B3%20g.%2033%2C%2079241%20%C5%A0iauliai!5e0!3m2!1slt!2slt!4v1708184124529!5m2!1slt!2slt"
+      width="600"
+      height="450"
+      style={{ border: "0"}}
+      allowFullScreen={true}
+      loading="lazy"
+      referrerPolicy="no-referrer-when-downgrade"
+    ></iframe>
+          </div>
         </div>
       </section>
     </div>
